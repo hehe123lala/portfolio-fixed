@@ -126,7 +126,7 @@ export const DeploymentGuide: React.FC<DeploymentGuideProps> = ({ isOpen, onClos
                             <div className="flex gap-4">
                                 <span className="font-bold text-purple-brand text-lg">3.</span>
                                 <div>
-                                    <p>输入一个新的名字 (例如 <code>portfolio-fixed</code>)，点击 <strong>"Create repository"</strong>。</p>
+                                    <p>输入一个新的名字 (例如 <code>portfolio-final</code>)，点击 <strong>"Create repository"</strong>。</p>
                                 </div>
                             </div>
                             <div className="flex gap-4 bg-purple-50 p-4 rounded-xl border border-purple-100">
@@ -167,13 +167,13 @@ export const DeploymentGuide: React.FC<DeploymentGuideProps> = ({ isOpen, onClos
                             <div className="flex gap-4">
                                 <span className="font-bold text-teal-600 text-lg">2.</span>
                                 <div className="space-y-2">
-                                    <p>点击 <strong className="text-black bg-teal-200 px-1 rounded">"Add new project"</strong> -> <strong>"Import from GitHub"</strong>。</p>
+                                    <p>点击 <strong className="text-black bg-teal-200 px-1 rounded">"Add new project"</strong> <span>&rarr;</span> <strong>"Import from GitHub"</strong>。</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <span className="font-bold text-teal-600 text-lg">3.</span>
                                 <div>
-                                    <p>选择您刚才新建的那个仓库 (例如 <code>portfolio-fixed</code>)。</p>
+                                    <p>选择您刚才新建的那个仓库 (例如 <code>portfolio-final</code>)。</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -189,7 +189,7 @@ export const DeploymentGuide: React.FC<DeploymentGuideProps> = ({ isOpen, onClos
                             <div>
                                 <h4 className="font-bold text-yellow-900 text-sm">如果仍然失败？</h4>
                                 <p className="text-yellow-800 text-xs mt-1">
-                                    请在 Netlify 的部署详情页，点击 <strong>"Retry deploy"</strong> -> <strong>"Clear cache and deploy site"</strong>。
+                                    请在 Netlify 的部署详情页，点击 <strong className="font-bold">"Retry deploy"</strong> <span>&rarr;</span> <strong className="font-bold">"Clear cache and deploy site"</strong>。
                                 </p>
                             </div>
                         </div>
