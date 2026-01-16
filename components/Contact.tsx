@@ -14,8 +14,8 @@ export const Contact: React.FC = () => {
               我始终对新的挑战保持开放态度。无论是寻求全职合作还是项目顾问，我都非常乐意听取你的想法。
             </p>
             <div className="space-y-4">
-              <a href="mailto:design@linzihan.com" className="text-2xl font-bold block hover:text-purple-brand transition-colors">
-                design@linzihan.com
+              <a href="mailto:1150504048@qq.com" className="text-2xl font-bold block hover:text-purple-brand transition-colors">
+                1150504048@qq.com
               </a>
               <p className="text-gray-500">期待与您共创未来</p>
             </div>

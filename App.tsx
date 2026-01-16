@@ -13,6 +13,7 @@ import { DroneControlDetail } from './components/DroneControlDetail';
 import { AiLabDetail } from './components/AiLabDetail';
 import { SaasDashboardDetail } from './components/SaasDashboardDetail';
 import { EvHmiDetail } from './components/EvHmiDetail';
+import { MobileAppDetail } from './components/MobileAppDetail';
 import { AboutMeDetail } from './components/AboutMeDetail';
 import { ContactDetail } from './components/ContactDetail';
 import { CollaborationDetail } from './components/CollaborationDetail';
@@ -129,6 +130,7 @@ const App: React.FC = () => {
                  {activeProjectId === 'saas_dashboard' && <SaasDashboardDetail />}
                  {activeProjectId === 'ev_hmi' && <EvHmiDetail />}
                  {activeProjectId === 'ai_lab' && <AiLabDetail />}
+                 {activeProjectId === 'mobile_banking' && <MobileAppDetail />}
 
                  <FeedbackSection targetId={activeProjectId} />
                </div>

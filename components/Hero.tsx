@@ -35,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onInquiry, onViewProjects }) => {
                   <span className="block text-gray-900">Interfaces.</span>
                 </h1>
                 <p className="text-xl text-gray-500 max-w-lg leading-relaxed font-medium">
-                  我是 <b>Alex Lin</b>，一名追求极致体验的 UI/UX 设计师。
+                  我是 <b>Xinng</b>，一名追求极致体验的 UI/UX 设计师。
                   <br className="hidden md:block" />
                   我不仅设计像素，更构建连接人与数字世界的桥梁。
                 </p>
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onInquiry, onViewProjects }) => {
              {/* Main Portrait Card */}
              <div className="relative w-[380px] h-[500px] bg-gray-200 rounded-[2.5rem] overflow-hidden shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-700 z-20 border-[8px] border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000" 
+                  src="https://i.ibb.co/qFgsRVKP/image.png" 
                   className="w-full h-full object-cover"
                   alt="Portrait"
                 />
@@ -87,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ onInquiry, onViewProjects }) => {
                 <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md p-4 rounded-2xl border border-white/40 shadow-lg">
                     <div className="flex justify-between items-center">
                         <div>
-                            <p className="text-sm font-black text-gray-900">Alex Lin</p>
+                            <p className="text-sm font-black text-gray-900">Xinng</p>
                             <p className="text-xs text-gray-500 font-bold">Product Designer</p>
                         </div>
                         <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white">

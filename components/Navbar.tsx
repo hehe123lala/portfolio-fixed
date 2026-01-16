@@ -16,9 +16,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onHome, onAbout, onServices, onP
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-2 cursor-pointer" onClick={onHome}>
             <div className="w-10 h-10 bg-purple-brand rounded-full flex items-center justify-center shadow-lg shadow-purple-brand/20">
-              <span className="text-white font-bold text-xl">M</span>
+              <span className="text-white font-bold text-xl">X</span>
             </div>
-            <span className="text-2xl font-bold tracking-tight text-gray-900">McCullum</span>
+            <span className="text-2xl font-bold tracking-tight text-gray-900">Xinny</span>
           </div>
           
           <div className="flex items-center gap-6">

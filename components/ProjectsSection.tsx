@@ -5,6 +5,13 @@ import { Layers } from 'lucide-react';
 
 const projects: Project[] = [
   {
+    id: 'mobile_banking',
+    title: 'Lumina 智能银行 App',
+    category: '移动应用 / 金融科技',
+    description: '重构传统银行体验，融合生物识别与 AI 财务分析的下一代数字钱包。',
+    thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800'
+  },
+  {
     id: 'watch',
     title: 'GT-Pro 智能手表全场景 UI',
     category: '智能硬件 / 穿戴设计',

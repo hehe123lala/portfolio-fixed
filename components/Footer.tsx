@@ -40,9 +40,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeploy }) => {
         <div className="border-t border-black/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
            <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-purple-brand rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">M</span>
+              <span className="text-white font-bold">X</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">McCullum</span>
+            <span className="text-xl font-bold tracking-tight">Xinny</span>
           </div>
           
           <div className="flex gap-8 text-sm font-bold opacity-60">
@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeploy }) => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <p className="text-xs font-bold opacity-40">Copyright © 2025 McCullum. All rights reserved.</p>
+            <p className="text-xs font-bold opacity-40">Copyright © 2025 Xinny. All rights reserved.</p>
             {onOpenDeploy && (
               <button 
                 onClick={onOpenDeploy}

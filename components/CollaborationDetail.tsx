@@ -1,7 +1,37 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { ShieldCheck, Zap, Rocket, Gem, Users, Lock, ChevronRight, FileText } from 'lucide-react';
 
 export const CollaborationDetail: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    type: 'UI 诊断与评估',
+    budget: '',
+    details: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, type, budget, details } = formData;
+    
+    const subject = `[私人预约] ${type} - ${name}`;
+    const body = `
+姓名: ${name}
+项目类型: ${type}
+预期预算: ${budget || '未选择'}
+
+详细合作背景:
+${details}
+    `.trim();
+
+    window.location.href = `mailto:1150504048@qq.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   const services = [
     {
       title: 'UI/UX 深度诊断',
@@ -114,15 +144,28 @@ export const CollaborationDetail: React.FC = () => {
         </div>
         
         <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-50">
-           <form className="space-y-8">
+           <form className="space-y-8" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase ml-2">您的称呼 / Name</label>
-                  <input type="text" className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none" placeholder="例如：李先生" />
+                  <input 
+                    type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none" 
+                    placeholder="例如：李先生" 
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase ml-2">项目类型 / Type</label>
-                  <select className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none appearance-none">
+                  <select 
+                    name="type"
+                    value={formData.type}
+                    onChange={handleInputChange}
+                    className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none appearance-none"
+                  >
                     <option>UI 诊断与评估</option>
                     <option>设计系统建设</option>
                     <option>新产品全案设计</option>
@@ -136,7 +179,13 @@ export const CollaborationDetail: React.FC = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                    {['5k-10k', '10k-30k', '30k-50k', '50k+'].map((range) => (
                      <label key={range} className="relative group cursor-pointer">
-                        <input type="radio" name="budget" className="peer sr-only" />
+                        <input 
+                            type="radio" 
+                            name="budget" 
+                            value={range}
+                            onChange={handleInputChange}
+                            className="peer sr-only" 
+                        />
                         <div className="text-center py-4 bg-gray-50 rounded-xl font-bold text-sm text-gray-400 peer-checked:bg-purple-brand peer-checked:text-white transition-all">
                            {range}
                         </div>
@@ -147,11 +196,19 @@ export const CollaborationDetail: React.FC = () => {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase ml-2">详细合作背景 / Details</label>
-                <textarea rows={6} className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none resize-none" placeholder="请简述您的项目目标、目前遇到的挑战以及希望达成的设计预期..."></textarea>
+                <textarea 
+                    name="details"
+                    rows={6} 
+                    value={formData.details}
+                    onChange={handleInputChange}
+                    className="w-full px-8 py-5 bg-gray-50 rounded-2xl border-none focus:ring-2 focus:ring-purple-brand outline-none resize-none" 
+                    placeholder="请简述您的项目目标、目前遇到的挑战以及希望达成的设计预期..."
+                    required
+                ></textarea>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                 <button className="w-full sm:w-auto bg-black text-white px-12 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all flex items-center justify-center gap-3">
+                 <button type="submit" className="w-full sm:w-auto bg-black text-white px-12 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all flex items-center justify-center gap-3">
                    <Users size={20} />
                    提交私人预约
                  </button>
