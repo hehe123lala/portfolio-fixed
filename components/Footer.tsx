@@ -54,15 +54,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeploy }) => {
           
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p className="text-xs font-bold opacity-40">Copyright © 2025 Xinny. All rights reserved.</p>
-            {onOpenDeploy && (
-              <button 
-                onClick={onOpenDeploy}
-                className="flex items-center gap-1 text-[10px] font-bold bg-black/5 hover:bg-black/10 px-3 py-1.5 rounded-full transition-colors text-black/60"
-              >
-                <Rocket size={12} />
-                <span>部署指南</span>
-              </button>
-            )}
           </div>
         </div>
       </div>
